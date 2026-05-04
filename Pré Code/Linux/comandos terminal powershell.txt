@@ -1,0 +1,20 @@
+wsl ~ -d Ubuntu  =  Iniciar ubuntu no terminal
+touch <nome que deseja e extensão> = criar arquivo vazio no linux
+ls -l = listagem avançada
+
+nano = editar arquivo
+chmod -R números(dono, grupo e outros) <pasta ou arquivo>
+
+grep <"palavra para buscar"> arquivo = Buscar palavra desejada dentro de um arquivo
+
+"|" (pipe) = Poderoso, ele junta dois comandos em um. Exemplo:
+ls | grep "projeto"
+--> ls lista todos os arquivos
+--> "|" (pipe) passa a lista para o grep que vai retornar apenas arquivos com o nome "projeto"
+
+ps aux = Listagem de processos rodando no computador, igual o ctrl + shift + esc do windows
+
+top = É a versão "ao vivo" do ps aux.
+
+wget = Downloads de arquivos com link direto de um instalados ou imagem
+curl = Transferência de dadospara testar APIs exibe o código HTML ou enviar dados para um servidor
