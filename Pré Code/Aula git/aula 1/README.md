@@ -1,0 +1,1 @@
+hello worldgit rm --cached "Aula git"
