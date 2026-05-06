@@ -1,1 +1,1 @@
-hello worldgit rm --cached "Aula git"
+hello world
