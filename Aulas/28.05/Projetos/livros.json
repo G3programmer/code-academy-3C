@@ -1,0 +1,47 @@
+[
+    {
+        "titulo": "Teste",
+        "autor": "sla",
+        "ano": 1500,
+        "genero": "sla",
+        "paginas": 100000,
+        "editora": "0",
+        "restricao": false
+    },
+    {
+        "titulo": ".",
+        "autor": ".",
+        "ano": 2026,
+        "genero": ".",
+        "paginas": 100000,
+        "editora": "0",
+        "restricao": true
+    },
+    {
+        "titulo": "l",
+        "autor": "l",
+        "ano": 2026,
+        "genero": "l",
+        "paginas": 100000,
+        "editora": "l",
+        "restricao": true
+    },
+    {
+        "titulo": "w",
+        "autor": "w",
+        "ano": 1,
+        "genero": "d",
+        "paginas": 102,
+        "editora": "w",
+        "restricao": false
+    },
+    {
+        "titulo": "sdsdsd",
+        "autor": "esse",
+        "ano": 4,
+        "genero": "reawrew",
+        "paginas": 100000,
+        "editora": "ererew",
+        "restricao": false
+    }
+]
