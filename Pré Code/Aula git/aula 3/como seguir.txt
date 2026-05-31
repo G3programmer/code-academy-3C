@@ -1,0 +1,29 @@
+Etapa 1
+ssh-keygen -t ed25519 -C "email do github" --> gera uma chave pública e uma chave privada para manter 
+a conexão do meu pc com o github
+
+Etapa 2
+Ent ele gera um id(normal) e um id.pub. Dê um  ---cat em ~/.ssh/id_(...).pub---
+
+Etapa 3
+Abra o seu GitHub no navegador.
+Clique na sua foto de perfil (canto superior direito) e vá em Settings.
+No menu lateral esquerdo, clique em SSH and GPG keys.
+Clique no botão verde New SSH key.
+No campo Title, coloque um nome para você lembrar
+No campo Key, cole o código que você copiou do terminal.
+Clique em Add SSH key.
+
+Etapa 4
+no WSL enviar um "ssh -T git@github.com" para logar com a chave ssh
+cd <pasta com os códigos organizados>
+git clone git@github.com:<Usuário do github>/<repositório que vai trabalhar>.git --> buscar o respositório do github onde vamos trabalhar e baixar
+
+Etapa 5
+*Edição que faz no projeto*
+
+depois enviar normalmente para o github
+
+git add .
+git commit -m "Concluindo Atividade 3: Conexão SSH e primeiro push"
+git push origin main
