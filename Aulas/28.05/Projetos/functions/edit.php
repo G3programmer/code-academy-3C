@@ -1,7 +1,7 @@
 <?php
 include "cleaner.php";
 
-function edit(&$livros) {
+function edit(&$livros, $arquivo = "livros.json") {
     limparTela();
     echo "          ..--                                        
           @@######                                
@@ -45,6 +45,7 @@ MM##++        ########@@
         $mapeamentoOpcoes[$contador] = $chaveOriginal;
         $contador++;
     }
+    echo "[0] - Cancelar edição\n";
     echo "--------------------------------------------------\n";
 
     while (true) {
@@ -116,7 +117,7 @@ MM##++        ########@@
         echo "Digite o novo ano (ou pressione Enter para manter '{$livro['ano']}'): ";
         $novoAno = trim(fgets(STDIN));
         
-        if (empty($novoAno)) {
+        if ($novoAno === "") {
             break; 
         }
 
@@ -143,19 +144,19 @@ MM##++        ########@@
         echo "Digite o novo número de páginas (ou pressione Enter para manter '{$livro['paginas']}'): ";
         $novasPaginas = trim(fgets(STDIN));
         
-        if (empty($novasPaginas)) {
+        if ($novasPaginas ==="") {
             break; 
         }
 
         $paginasLimpo = str_replace('.', '', $novasPaginas);
         if (ctype_digit($paginasLimpo)) {
             $paginasInteiro = (int)$paginasLimpo;
-            if ($paginasInteiro > 0) {
+            if ($paginasInteiro > 0 && $paginasInteiro <= 100000) {
                 $livro['paginas'] = $paginasInteiro;
                 break;
             }
         }
-        echo "O número de páginas deve ser um número inteiro maior que zero (ex: 350 ou 100.000).\n";
+        echo "O número de páginas deve ser um número inteiro maior que zero e menor ou igual a 100.000.\n";
     }
 
     // EDITAR EDITORA
@@ -185,7 +186,6 @@ MM##++        ########@@
     }
 
     // SALVA AS ALTERAÇÕES NO ARQUIVO JSON
-    $arquivo = "livros.json";
     $jsonPronto = json_encode($livros, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
     file_put_contents($arquivo, $jsonPronto);
 

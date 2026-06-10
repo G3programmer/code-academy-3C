@@ -20,6 +20,7 @@ function confirm($option, &$livros) {
             //Se sim
             if($decision === "S" || $decision === "s") {
                  create($livros); 
+
              while(true) {
                 echo "Deseja adicionar outro livro? (S/N): ";
                 $decision = trim(fgets(STDIN));
@@ -27,13 +28,17 @@ function confirm($option, &$livros) {
                 if($decision === "S" || $decision === "s") {
                     create($livros); 
                 } 
+
                 elseif($decision === "N"|| $decision === "n") {
                     return;
                 } 
+                
                 else {
                     echo "Opção inválida. Tente novamente.\n";
                 } 
-               } 
+               
+                }
+
             }
               //Se não
               else if($decision === "N"|| $decision === "n") {
